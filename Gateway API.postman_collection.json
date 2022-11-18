@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "82955acc-9db3-4549-ad33-34f27f44f6a0",
+		"name": "Gateway API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17564352"
+	},
+	"item": [
+		{
+			"name": "Update Gateway",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \t\t\"serialNumber\":    \"11111\",\n  \t\t\"humanReadableName\": \t  \"20204455\",\n  \t\t\"ipv4Address\":  \"122.0.0.127\",\n  \t\t\"peripheralDevices\": [{\n                \t\"uid\":           458,\n  \t\t            \"vendor\":        \"2020\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"online\"\n          }, \n          {\n                \t\"uid\":           47,\n  \t\t            \"vendor\":        \"202045\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"offline\"\n          }          \n        ]  \n  \t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/gateways/63767c251929b030cecfd4d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"gateways",
+						"63767c251929b030cecfd4d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add PeripheralDevice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"peripheralDevice\": {\n                \t\"uid\":           474345,\n  \t\t            \"vendor\":        \"202066666666444\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"offline\"\n          }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/gateways/63767c251929b030cecfd4d6/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"gateways",
+						"63767c251929b030cecfd4d6",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Gateway ByID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/gateways/63767c251929b030cecfd4d6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"gateways",
+						"63767c251929b030cecfd4d6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Gateways",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/gateways?name=mi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"gateways"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "mi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Gateway by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/gateways/6376744313e1ffa67ab99ed1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"gateways",
+						"6376744313e1ffa67ab99ed1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete PeripheralDevice",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"peripheralDevice\": {\n                \t\"uid\":           458\n          }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/gateways/63767c251929b030cecfd4d6/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"gateways",
+						"63767c251929b030cecfd4d6",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \t\t\"serialNumber\":    \"9331\",\n  \t\t\"humanReadableName\": \t  \"mi\",\n  \t\t\"ipv4Address\":  \"122.0.0.127\",\n  \t\t\"peripheralDevices\": [{\n                \t\"uid\":           458,\n  \t\t            \"vendor\":        \"2020\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"online\"\n          }, \n          {\n                \t\"uid\":           47,\n  \t\t            \"vendor\":        \"202045\",\n                    \"dateCreated\":   \"2022-01-01\",\n                    \"status\":        \"offline\"\n          }          \n        ]  \n  \t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/gateways",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"gateways"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
